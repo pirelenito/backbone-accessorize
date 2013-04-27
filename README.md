@@ -2,27 +2,35 @@
 
 Simple BackboneJS plugin to automagically create attribute accessors for your model attributes:
 
-    model.myAttribute() // getter for myAttribute
-    model.myAttribute('Paulo') // setter for myAttribute
+```javascript
+model.myAttribute() // getter for myAttribute
+model.myAttribute('Paulo') // setter for myAttribute
+```
 
 ## Usage ##
 
 To make it work, define the attribute accessors inside the model definition:
 
-    var FancyModel = Backbone.Model.extends({
-      accessors: ['myAttribute']
-    });
+```javascript
+var FancyModel = Backbone.Model.extends({
+  accessors: ['myAttribute']
+});
+```
 
 Once the model is instantiated, it will provide the accessors for the *myAttribute* attribute:
 
-    var model = new FancyModel()
-    model.myAttribute('Paulo')
-    model.myAttribute() // Paulo
+```javascript
+var model = new FancyModel()
+model.myAttribute('Paulo')
+model.myAttribute() // Paulo
+```
 
 It doesn't break the original interface, so you still can do:
 
-    model.get('myAttribute');
-    model.set('myAttribute', 'Paulo');
+```javascript
+model.get('myAttribute');
+model.set('myAttribute', 'Paulo');
+```
 
 ## Advatages ##
 
