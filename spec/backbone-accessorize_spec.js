@@ -17,6 +17,18 @@ describe("Backbone Assessorize", function() {
     }).toThrow();
   });
 
+  it("should not break the default Backbone.Model behavior", function() {
+    var initialize = jasmine.createSpy('initialize');
+
+    var MyModel = Backbone.Model.extend({
+      initialize: initialize
+    })
+
+    new MyModel();
+
+    expect(initialize).toHaveBeenCalled();
+  });
+
   describe("given a model defining its assessors", function() {
     var ModelWithAssessors, model;
 
