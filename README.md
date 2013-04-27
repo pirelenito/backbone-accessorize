@@ -2,21 +2,27 @@
 
 Simple BackboneJS plugin to automagically create attribute assessors for your model attributes:
 
-    model.name() // getter for name
-    model.name('Paulo') // setter for name
+    model.myAttribute() // getter for myAttribute
+    model.myAttribute('Paulo') // setter for myAttribute
 
 ## Usage ##
 
 To make it work, define the attribute assessors inside the model definition:
 
     var FancyModel = Backbone.Model.extends({
-      assessors: ['name']
+      assessors: ['myAttribute']
     });
+
+Once the model is instantiated, it will provide the accessors for the *myAttribute* attribute:
+
+    var model = new FancyModel()
+    model.myAttribute('Paulo')
+    model.myAttribute() // Paulo
 
 It doesn't break the original interface, so you still can do:
 
-    model.get('name');
-    model.set('name', 'Paulo');
+    model.get('myAttribute');
+    model.set('myAttribute', 'Paulo');
 
 ## Advatages ##
 
@@ -27,6 +33,6 @@ Don't agree? Please let me know!
 
 ## Instalation ##
 
-Download the single src/backbone-assessorize.js file and load it just before BackboneJS.
+Download the single [src/backbone-assessorize.js](https://raw.github.com/pirelenito/backbone-accessorize/master/src/backbone-accessorize.js) file and load it just after BackboneJS.
 
 It is important that you load this pluggin before any other, because it works by Monkey Patching the Backbone.Model implementation.
