@@ -19,7 +19,7 @@
 
   function preventOverwrite (model, accessor) {
     if (!_(model[accessor]).isUndefined()) {
-      throw 'accessor attribute "'+accessor+'" already exists'
+      throw "can't overwrite '"+accessor+"' property"
     }
   }
 

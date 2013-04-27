@@ -14,7 +14,7 @@ describe("Backbone Assessorize", function() {
 
     expect(function () {
       new InvalidModel();
-    }).toThrow();
+    }).toThrow("can't overwrite 'constructor' property");
   });
 
   it("should not break the default Backbone.Model behavior", function() {
