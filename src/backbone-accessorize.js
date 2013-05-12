@@ -29,6 +29,6 @@
         return model.set(accessor, arguments[0])
       }
       return model.get(accessor);
-    }.bind(model);
+    };
   }
 })(Backbone);
