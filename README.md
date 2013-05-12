@@ -1,4 +1,6 @@
-# Backbone Accessorize #
+# Backbone Accessorize [![Build Status](https://secure.travis-ci.org/pirelenito/backbone-accessorize.png)](https://travis-ci.org/pirelenito/backbone-accessorize) #
+
+https://api.travis-ci.org/pirelenito/backbone-accessorize.png
 
 Simple BackboneJS plugin to automagically create attribute accessors for your model attributes:
 
